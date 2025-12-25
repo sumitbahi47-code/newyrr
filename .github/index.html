@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Our Year in Memories ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom, #141E30, #243B55);
+    color: #fff;
+    text-align: center;
+}
+
+section {
+    padding: 50px 20px;
+}
+
+h1 { font-size: 2.4em; }
+h2 { color: #ff9a9e; margin-bottom: 15px; }
+p { font-size: 1.1em; line-height: 1.6; }
+
+.card {
+    background: rgba(255,255,255,0.08);
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 22px;
+    max-width: 750px;
+}
+
+.gallery img {
+    width: 90%;
+    max-width: 360px;
+    border-radius: 18px;
+    margin: 15px 0;
+}
+
+video {
+    width: 90%;
+    max-width: 360px;
+    border-radius: 18px;
+    margin: 18px 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.countdown {
+    font-size: 1.4em;
+    color: #ffd1dc;
+    margin-top: 15px;
+}
+
+.heart {
+    font-size: 42px;
+    animation: beat 1s infinite;
+}
+
+@keyframes beat {
+    0%,100% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+}
+
+footer {
+    padding-bottom: 80px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Background Music -->
+<audio autoplay loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- HERO -->
+<section>
+    <h1>Our Year in Memories 💖</h1>
+    <p>2025 was beautiful… because of you.</p>
+    <div class="countdown" id="countdown"></div>
+</section>
+
+<!-- BEGINNING -->
+<section class="card">
+    <h2>✨ The Beginning</h2>
+    <p>
+        Jab tum meri life mein aayi,  
+        tab pata chala —  
+        khushi bhi kisi ka naam ho sakti hai ❤️
+    </p>
+</section>
+
+<!-- PHOTOS -->
+<section class="card gallery">
+    <h2>📸 Our Little Moments</h2>
+    <img src="photo1.jpg">
+    <img src="photo2.jpg">
+    <img src="photo3.jpg">
+    <p>
+        Hasi, care, gussa, aur pyaar —  
+        sab kuch perfect tha 💫
+    </p>
+</section>
+
+<!-- VIDEOS -->
+<section class="card">
+    <h2>🎥 Our Little Videos</h2>
+
+    <video controls autoplay muted loop playsinline>
+        <source src="video1.mp4" type="video/mp4">
+    </video>
+
+    <p>Iss clip mein tumhari hasi… meri favorite hai 🫶</p>
+
+    <video controls muted loop playsinline>
+        <source src="video2.mp4" type="video/mp4">
+    </video>
+
+    <p>
+        Har video ek reminder hai —  
+        hum saath kitne special hain ❤️
+    </p>
+</section>
+
+<!-- UPS & DOWNS -->
+<section class="card">
+    <h2>💫 Ups & Downs</h2>
+    <p>
+        Perfect hum nahi the,  
+        par saath rehna  
+        hamesha perfect decision tha 🤍
+    </p>
+</section>
+
+<!-- TODAY -->
+<section class="card">
+    <h2>❤️ Today</h2>
+    <p>
+        Aaj bhi main tumhe  
+        har roz thoda aur choose karta hoon.
+    </p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>
+        New Year. New Dreams.  
+        Same Us. Same Love. ✨
+    </p>
+    <div class="heart">💖</div>
+    <p>Happy New Year, Gitika</p>
+    <p>— Always Yours</p>
+</footer>
+
+<script>
+const newYear = new Date("January 1, 2026 00:00:00").getTime();
+
+setInterval(() => {
+    const now = new Date().getTime();
+    const diff = newYear - now;
+
+    const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const s = Math.floor((diff % (1000 * 60)) / 1000);
+
+    document.getElementById("countdown").innerHTML =
+        `⏳ ${d}d ${h}h ${m}m ${s}s to New Year`;
+}, 1000);
+</script>
+
+</body>
+</html>
